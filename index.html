@@ -1,51 +1,708 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-PT">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTek — Assistência técnica online pelo WhatsApp</title>
     <meta
       name="description"
-      content="Entre em contato conosco pelo WhatsApp."
+      content="Computadores lentos, vírus, Wi-Fi ou telemóveis: resolvemos remotamente, por videochamada. Diagnóstico gratuito e resposta em minutos pelo WhatsApp."
     />
-    <title>Fale conosco</title>
+    <meta name="theme-color" content="#f7faf6" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:title" content="PTek — Assistência técnica online pelo WhatsApp" />
+    <meta
+      property="og:description"
+      content="Suporte remoto para computadores, telemóveis e redes. Diagnóstico gratuito, orçamento antes de começar e garantia de 30 dias."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307231a'/%3E%3Cpath d='M20 42V22h12a7 7 0 0 1 0 14h-6v6z' fill='%2325d366'/%3E%3Cpath d='M38 42V22h8' stroke='%23f7faf6' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <main class="hero">
-      <p class="eyebrow">Atendimento online</p>
-      <h1>Olá, estamos aqui para ajudar.</h1>
-      <p class="intro">
-        Tire suas dúvidas e fale com a nossa equipe diretamente pelo WhatsApp.
-      </p>
+  <body id="top">
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="PTek — início">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path d="M9 24V8h6.5a5 5 0 0 1 0 10H13v6z" fill="currentColor" />
+              <path d="M21 24V8h5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span class="brand-name">PTek</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+          aria-label="Abrir menu"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="menu-principal" aria-label="Navegação principal" data-nav>
+          <ul class="nav-list">
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#testemunhos">Testemunhos</a></li>
+            <li><a href="#perguntas">Perguntas</a></li>
+          </ul>
+          <a
+            class="btn btn--primary nav-cta"
+            href="https://wa.me/351928124737?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Falar no WhatsApp
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span>
+              Assistência técnica online
+            </p>
+            <h1 id="hero-title">
+              O seu equipamento a funcionar,
+              <span class="highlight">sem sair de&nbsp;casa.</span>
+            </h1>
+            <p class="lead">
+              Resolvemos problemas de computadores, telemóveis e redes por
+              videochamada. Diagnóstico gratuito, preço combinado antes de começar e
+              nada a instalar.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn--primary btn--lg"
+                href="https://wa.me/351928124737?text=Ol%C3%A1!%20Preciso%20de%20ajuda%20com%20o%20meu%20equipamento."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M20.52 3.48A11.83 11.83 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.1.55 4.15 1.6 5.96L.1 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.16-3.45-8.44ZM12.1 21.73h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.84 9.84 0 0 1-1.51-5.22c0-5.42 4.42-9.84 9.85-9.84a9.8 9.8 0 0 1 6.97 2.89 9.85 9.85 0 0 1 2.88 6.98c0 5.42-4.42 9.83-9.81 9.83Zm5.4-7.37c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.07-.81.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.14 3.27 5.19 4.59.73.32 1.3.51 1.74.65.73.23 1.4.2 1.93.12.59-.09 1.78-.73 2.03-1.44.25-.7.25-1.31.18-1.44-.08-.13-.28-.2-.58-.35Z"
+                  />
+                </svg>
+                Falar no WhatsApp
+              </a>
+              <a class="btn btn--ghost btn--lg" href="#como-funciona">Ver como funciona</a>
+            </div>
+            <ul class="hero-points">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="m5 12.5 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Diagnóstico sem custo
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="m5 12.5 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Resposta em minutos
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="m5 12.5 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Garantia de 30 dias
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <div class="chat-card" aria-hidden="true">
+              <div class="chat-head" aria-hidden="true">
+                <span class="chat-avatar">PT</span>
+                <span class="chat-id">
+                  <strong>PTek Suporte</strong>
+                  <small><span class="status-dot"></span> Online agora</small>
+                </span>
+                <svg class="chat-icon" viewBox="0 0 24 24" focusable="false">
+                  <path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="chat-body">
+                <p class="bubble bubble--in">
+                  O meu portátil está lentíssimo e já reiniciei duas vezes…
+                  <span class="bubble-time">10:02</span>
+                </p>
+                <p class="bubble bubble--out">
+                  Boa tarde! Consigo ajudar já. Pode ligar a videochamada por aqui?
+                  <span class="bubble-time">10:03 ✓✓</span>
+                </p>
+                <p class="bubble bubble--in">
+                  Já está. Está a ver o meu ecrã?
+                  <span class="bubble-time">10:05</span>
+                </p>
+                <p class="bubble bubble--out">
+                  Perfeito. Vou verificar o que está a travar e envio o orçamento
+                  antes de mexer.
+                  <span class="bubble-time">10:05 ✓✓</span>
+                </p>
+                <p class="typing" aria-hidden="true"><span></span><span></span><span></span></p>
+              </div>
+              <p class="chat-foot">Diagnóstico gratuito · sem compromisso</p>
+            </div>
+
+            <div class="floating-badge floating-badge--rating">
+              <span class="badge-stars" aria-hidden="true">★★★★★</span>
+              <span><strong>4,9/5</strong> em 214 avaliações</span>
+            </div>
+            <div class="floating-badge floating-badge--time">
+              <strong>12 min</strong>
+              <span>tempo médio de resposta</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Números do serviço">
+        <div class="container">
+          <dl class="stats-list">
+            <div class="stat" data-reveal>
+              <dt>Atendimentos remotos</dt>
+              <dd>+1.200</dd>
+            </div>
+            <div class="stat" data-reveal>
+              <dt>Resolvidos no mesmo dia</dt>
+              <dd>94%</dd>
+            </div>
+            <div class="stat" data-reveal>
+              <dt>Avaliação dos clientes</dt>
+              <dd>4,9/5</dd>
+            </div>
+            <div class="stat" data-reveal>
+              <dt>Garantia incluída</dt>
+              <dd>30 dias</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" id="como-funciona" aria-labelledby="como-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Como funciona</p>
+            <h2 id="como-title">Três passos, zero complicações</h2>
+            <p class="section-lead">
+              Do primeiro «olá» ao problema resolvido, tudo acontece numa conversa.
+              Sem deslocações, sem esperas e sem surpresas na fatura.
+            </p>
+          </div>
+
+          <ol class="steps">
+            <li class="step" data-reveal>
+              <span class="step-num" aria-hidden="true">01</span>
+              <h3>Descreva o problema</h3>
+              <p>
+                Envie uma mensagem no WhatsApp com o que está a acontecer. Se puder,
+                junte uma foto ou um vídeo do erro.
+              </p>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step-num" aria-hidden="true">02</span>
+              <h3>Diagnóstico e orçamento</h3>
+              <p>
+                Ligamos por videochamada, vemos o equipamento em tempo real e
+                combinamos o preço antes de tocar em qualquer coisa.
+              </p>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step-num" aria-hidden="true">03</span>
+              <h3>Resolvido e garantido</h3>
+              <p>
+                Resolvemos na hora sempre que possível. Paga no final, apenas se
+                ficar satisfeito, e fica com 30 dias de garantia.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section--tint" id="servicos" aria-labelledby="servicos-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Serviços</p>
+            <h2 id="servicos-title">O que resolvemos por si</h2>
+            <p class="section-lead">
+              Suporte remoto para o dia a dia — em casa ou no pequeno negócio.
+              Todas as intervenções começam com um diagnóstico gratuito.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card" data-reveal>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <rect x="3" y="4.5" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M2 20h20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
+              <h3>Computadores lentos</h3>
+              <p>
+                Arranques intermináveis, programas a bloquear e disco cheio.
+                Limpamos, otimizamos e explicamos o que estava a falhar.
+              </p>
+              <a
+                class="card-link"
+                href="https://wa.me/351928124737?text=Ol%C3%A1!%20O%20meu%20computador%20est%C3%A1%20lento."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar sobre isto <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M12 3l7 3v5.5c0 4.4-2.9 7.4-7 9-4.1-1.6-7-4.6-7-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="m9 11.8 2.2 2.2 4-4.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h3>Vírus e segurança</h3>
+              <p>
+                Avisos estranhos, janelas a abrir sozinhas ou contas invadidas.
+                Removemos ameaças e protegemos os seus dados.
+              </p>
+              <a
+                class="card-link"
+                href="https://wa.me/351928124737?text=Ol%C3%A1!%20Acho%20que%20tenho%20um%20v%C3%ADrus%20no%20equipamento."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar sobre isto <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M3 8.6a14 14 0 0 1 18 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M6.6 12.2a9 9 0 0 1 10.8 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M10.1 15.7a4.2 4.2 0 0 1 3.8 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <circle cx="12" cy="19.2" r="1.2" fill="currentColor" />
+                </svg>
+              </span>
+              <h3>Wi-Fi e redes</h3>
+              <p>
+                Internet que cai, sinal fraco noutra divisão ou impressora que
+                desaparece. Ajustamos a rede e testamos tudo consigo.
+              </p>
+              <a
+                class="card-link"
+                href="https://wa.me/351928124737?text=Ol%C3%A1!%20Tenho%20problemas%20com%20o%20Wi-Fi%20em%20casa."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar sobre isto <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M10.8 18.4h2.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
+              <h3>Telemóveis e tablets</h3>
+              <p>
+                Pouco espaço, bateria a desaparecer, aplicações que não abrem.
+                Configuramos e limpamos o equipamento, com os seus dados intactos.
+              </p>
+              <a
+                class="card-link"
+                href="https://wa.me/351928124737?text=Ol%C3%A1!%20Preciso%20de%20ajuda%20com%20o%20meu%20telem%C3%B3vel."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar sobre isto <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+                  <path d="m3.8 6.6 8.2 5.9 8.2-5.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h3>Email, contas e backups</h3>
+              <p>
+                Recupere o acesso ao email, organize ficheiros e garanta que nada
+                se perde. Deixamos uma cópia de segurança a funcionar.
+              </p>
+              <a
+                class="card-link"
+                href="https://wa.me/351928124737?text=Ol%C3%A1!%20Preciso%20de%20ajuda%20com%20email%20ou%20backups."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar sobre isto <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card service-card--cta" data-reveal>
+              <h3>Não encontra o seu caso?</h3>
+              <p>
+                Descreva-nos o que se passa. Se não conseguirmos resolver, dizemos-lhe
+                logo — sem custos e sem rodeios.
+              </p>
+              <a
+                class="btn btn--primary"
+                href="https://wa.me/351928124737?text=Ol%C3%A1!%20Tenho%20uma%20situa%C3%A7%C3%A3o%20diferente%20e%20gostaria%20de%20ajuda."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contar o meu caso
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="porque" aria-labelledby="porque-title">
+        <div class="container split">
+          <div class="split-copy" data-reveal>
+            <p class="eyebrow">Porque a PTek</p>
+            <h2 id="porque-title">Suporte humano, sem jargão e sem sustos.</h2>
+            <p class="section-lead">
+              Trabalhamos com quem não quer saber de termos técnicos — quer apenas
+              que as coisas funcionem. Cada passo é explicado em linguagem simples.
+            </p>
+            <a class="btn btn--dark" href="#perguntas">Tirar dúvidas frequentes</a>
+          </div>
+
+          <ul class="feature-list">
+            <li data-reveal>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M20 12a8 8 0 1 1-3.2-6.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M21 4v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12 8v4.5l3 1.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>Resposta em minutos</h3>
+                <p>Atendimento das 8h às 22h, todos os dias. Em média respondemos em 12 minutos.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M4 7h16M4 12h10M4 17h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <circle cx="18" cy="15.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8" />
+                  <path d="m16.4 15.6 1.2 1.2 2-2.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>Preço fechado antes de começar</h3>
+                <p>Sabe exatamente quanto vai pagar. Se não concordar, não há qualquer custo.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M12 3l7 3v5.5c0 4.4-2.9 7.4-7 9-4.1-1.6-7-4.6-7-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M12 9v3.6M12 16h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>Privacidade em primeiro lugar</h3>
+                <p>Acesso apenas ao necessário, sempre com a sua autorização e à vista.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1.1 5.8L12 16.9l-5.3 2.7 1.1-5.8-4.3-4.1 5.9-.8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>30 dias de garantia</h3>
+                <p>Se o mesmo problema voltar, resolvemos de novo sem cobrar nada.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--tint" id="testemunhos" aria-labelledby="testemunhos-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Testemunhos</p>
+            <h2 id="testemunhos-title">Quem já resolveu connosco</h2>
+            <p class="section-lead">
+              Mais de 1.200 atendimentos e uma avaliação média de 4,9 em 5.
+            </p>
+          </div>
+
+          <div class="testimonials">
+            <figure class="testimonial" data-reveal>
+              <p class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+                <span aria-hidden="true">★★★★★</span>
+              </p>
+              <blockquote>
+                <p>
+                  «O meu portátil demorava dez minutos a arrancar. Em menos de uma
+                  hora estava como novo — e ainda me explicaram como evitar que
+                  voltasse a acontecer.»
+                </p>
+              </blockquote>
+              <figcaption>
+                <span class="avatar" aria-hidden="true">AR</span>
+                <span><strong>Ana R.</strong><small>Lisboa · Computador lento</small></span>
+              </figcaption>
+            </figure>
+
+            <figure class="testimonial" data-reveal>
+              <p class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+                <span aria-hidden="true">★★★★★</span>
+              </p>
+              <blockquote>
+                <p>
+                  «Apareceu um aviso no computador a pedir pagamento e entrei em
+                  pânico. Resolveram tudo por videochamada, no mesmo dia, e sem
+                  cobrar o diagnóstico.»
+                </p>
+              </blockquote>
+              <figcaption>
+                <span class="avatar" aria-hidden="true">MS</span>
+                <span><strong>Miguel S.</strong><small>Porto · Vírus e segurança</small></span>
+              </figcaption>
+            </figure>
+
+            <figure class="testimonial" data-reveal>
+              <p class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+                <span aria-hidden="true">★★★★★</span>
+              </p>
+              <blockquote>
+                <p>
+                  «Tenho um café e o Wi-Fi falhava várias vezes ao dia. Ficou
+                  estável e ainda configuraram a rede de convidados. Simples e
+                  rápido.»
+                </p>
+              </blockquote>
+              <figcaption>
+                <span class="avatar" aria-hidden="true">CM</span>
+                <span><strong>Carla M.</strong><small>Braga · Wi-Fi e redes</small></span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="perguntas" aria-labelledby="perguntas-title">
+        <div class="container faq-layout">
+          <div class="faq-intro" data-reveal>
+            <p class="eyebrow">Perguntas frequentes</p>
+            <h2 id="perguntas-title">Antes de nos escrever</h2>
+            <p class="section-lead">
+              Reunimos as dúvidas mais comuns. Se a sua não estiver aqui, mande
+              mensagem — respondemos em minutos.
+            </p>
+            <a
+              class="btn btn--ghost"
+              href="https://wa.me/351928124737?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Perguntar no WhatsApp
+            </a>
+          </div>
+
+          <div class="faq-list" data-reveal>
+            <details class="faq" open>
+              <summary>Como é que me ajudam à distância?</summary>
+              <p>
+                Falamos consigo por videochamada no WhatsApp e vemos o ecrã do seu
+                equipamento em tempo real. Orientamos cada passo e, quando
+                autorizar, assumimos o controlo para resolver mais depressa.
+              </p>
+            </details>
+            <details class="faq">
+              <summary>Quanto custa o atendimento?</summary>
+              <p>
+                O diagnóstico é gratuito. Depois de identificarmos o problema,
+                indicamos um valor fixo e só avançamos com a sua aprovação. O
+                pagamento é feito no final, por transferência ou MB Way.
+              </p>
+            </details>
+            <details class="faq">
+              <summary>Os meus ficheiros e dados ficam seguros?</summary>
+              <p>
+                Sim. Só acedemos ao que for necessário para resolver o problema e
+                nunca copiamos ficheiros pessoais. Pode acompanhar tudo no ecrã e
+                terminar a sessão a qualquer momento.
+              </p>
+            </details>
+            <details class="faq">
+              <summary>Que equipamentos conseguem ajudar?</summary>
+              <p>
+                Computadores Windows e Mac, telemóveis e tablets Android e iOS,
+                impressoras e redes domésticas. Para avarias físicas (ecrãs
+                partidos, por exemplo), indicamos onde reparar.
+              </p>
+            </details>
+            <details class="faq">
+              <summary>Em quanto tempo conseguem atender?</summary>
+              <p>
+                Atendemos todos os dias, das 8h às 22h. A maioria das mensagens é
+                respondida em cerca de 12 minutos e os casos urgentes são
+                resolvidos no mesmo dia.
+              </p>
+            </details>
+            <details class="faq">
+              <summary>Preciso de instalar algum programa?</summary>
+              <p>
+                Não. Usamos a videochamada do WhatsApp, que já tem no telemóvel ou
+                no computador. Se for preciso uma ferramenta de acesso remoto,
+                enviamos o link e explicamos como abrir.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-final" aria-labelledby="cta-title">
+        <div class="container cta-final-inner" data-reveal>
+          <p class="eyebrow eyebrow--light">
+            <span class="status-dot" aria-hidden="true"></span>
+            Estamos online
+          </p>
+          <h2 id="cta-title">Vamos resolver isso hoje?</h2>
+          <p class="cta-final-lead">
+            Conte-nos o que se passa e receba um diagnóstico gratuito em minutos.
+            Sem compromisso, sem letras pequenas.
+          </p>
+          <div class="cta-final-actions">
+            <a
+              class="btn btn--primary btn--lg"
+              href="https://wa.me/351928124737?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20um%20diagn%C3%B3stico%20gratuito."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M20.52 3.48A11.83 11.83 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.1.55 4.15 1.6 5.96L.1 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.16-3.45-8.44ZM12.1 21.73h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.84 9.84 0 0 1-1.51-5.22c0-5.42 4.42-9.84 9.85-9.84a9.8 9.8 0 0 1 6.97 2.89 9.85 9.85 0 0 1 2.88 6.98c0 5.42-4.42 9.83-9.81 9.83Zm5.4-7.37c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.07-.81.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.14 3.27 5.19 4.59.73.32 1.3.51 1.74.65.73.23 1.4.2 1.93.12.59-.09 1.78-.73 2.03-1.44.25-.7.25-1.31.18-1.44-.08-.13-.28-.2-.58-.35Z"
+                />
+              </svg>
+              Conversar no WhatsApp
+            </a>
+            <a class="cta-phone" href="tel:+351928124737">
+              ou ligue <strong>+351 928 124 737</strong>
+            </a>
+          </div>
+          <p class="cta-note">Todos os dias, das 8h às 22h · Diagnóstico gratuito</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="PTek — início">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M9 24V8h6.5a5 5 0 0 1 0 10H13v6z" fill="currentColor" />
+                <path d="M21 24V8h5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="brand-name">PTek</span>
+          </a>
+          <p>
+            Assistência técnica online para computadores, telemóveis e redes.
+            Resolvemos à distância, com preço fechado e garantia de 30 dias.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+          <h2 class="footer-title">Navegação</h2>
+          <ul>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#testemunhos">Testemunhos</a></li>
+            <li><a href="#perguntas">Perguntas frequentes</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h2 class="footer-title">Contacto</h2>
+          <ul>
+            <li>
+              <a
+                href="https://wa.me/351928124737?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp: +351 928 124 737
+              </a>
+            </li>
+            <li><a href="tel:+351928124737">Chamada: +351 928 124 737</a></li>
+            <li>Atendimento das 8h às 22h</li>
+            <li>Todo o Portugal continental</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span data-year>2026</span> PTek. Todos os direitos reservados.</p>
+        <a href="#top" class="back-top">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+
+    <aside class="quick-contact" aria-label="Atalho de contacto">
       <a
-        class="whatsapp-button"
-        href="https://wa.me/351928124737?text=Olá!%20Gostaria%20de%20saber%20mais."
+        class="whatsapp-float"
+        href="https://wa.me/351928124737?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais."
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Conversar com a equipe pelo WhatsApp"
+        aria-label="Abrir conversa no WhatsApp"
+        title="Fale connosco pelo WhatsApp"
       >
-        <svg aria-hidden="true" viewBox="0 0 24 24">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path
             d="M20.52 3.48A11.83 11.83 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.1.55 4.15 1.6 5.96L.1 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.16-3.45-8.44ZM12.1 21.73h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.84 9.84 0 0 1-1.51-5.22c0-5.42 4.42-9.84 9.85-9.84a9.8 9.8 0 0 1 6.97 2.89 9.85 9.85 0 0 1 2.88 6.98c0 5.42-4.42 9.83-9.81 9.83Zm5.4-7.37c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.07-.81.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.14 3.27 5.19 4.59.73.32 1.3.51 1.74.65.73.23 1.4.2 1.93.12.59-.09 1.78-.73 2.03-1.44.25-.7.25-1.31.18-1.44-.08-.13-.28-.2-.58-.35Z"
           />
         </svg>
-        Conversar pelo WhatsApp
+        <span class="float-label">Fale connosco</span>
       </a>
-    </main>
+    </aside>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/351928124737?text=Olá!%20Gostaria%20de%20saber%20mais."
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Abrir conversa no WhatsApp"
-      title="Fale conosco pelo WhatsApp"
-    >
-      <svg aria-hidden="true" viewBox="0 0 24 24">
-        <path
-          d="M20.52 3.48A11.83 11.83 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.1.55 4.15 1.6 5.96L.1 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.16-3.45-8.44ZM12.1 21.73h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.84 9.84 0 0 1-1.51-5.22c0-5.42 4.42-9.84 9.85-9.84a9.8 9.8 0 0 1 6.97 2.89 9.85 9.85 0 0 1 2.88 6.98c0 5.42-4.42 9.83-9.81 9.83Zm5.4-7.37c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.07-.81.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.14 3.27 5.19 4.59.73.32 1.3.51 1.74.65.73.23 1.4.2 1.93.12.59-.09 1.78-.73 2.03-1.44.25-.7.25-1.31.18-1.44-.08-.13-.28-.2-.58-.35Z"
-        />
-      </svg>
-    </a>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "PTek",
+        "description": "Assistência técnica online para computadores, telemóveis e redes, por videochamada.",
+        "telephone": "+351928124737",
+        "priceRange": "€€",
+        "areaServed": "PT",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "22:00"
+        }
+      }
+    </script>
+    <script src="script.js" defer></script>
   </body>
 </html>
