@@ -90,8 +90,13 @@ Regras:
 5. Implementar, validar e entregar. Registar o ciclo em
    `docs/design-review-<data>.md`.
 
+Um ciclo completo, com brief, handoffs, conflito resolvido, plano de
+implementação e gates, está em `docs/exemplo-ciclo.md`.
+
 ## Artefactos
 
 - `agents/*.md` — cartões de papel e prompts reutilizáveis.
-- `docs/design-review-*.md` — síntese do ciclo, backlog e decisões.
+- `docs/exemplo-ciclo.md` — ciclo de exemplo completo (brief → handoffs →
+  síntese → plano → gates), não aplicado ao produto.
+- `docs/design-review-*.md` — síntese de cada ciclo, backlog e decisões.
 - Código e `README.md` na raiz — produto final.
