@@ -132,6 +132,10 @@ button {
   top: 0;
 }
 
+#conteudo:focus {
+  outline: none;
+}
+
 /* =========================================================
    Layout helpers
    ========================================================= */
@@ -178,19 +182,22 @@ button {
 
 .eyebrow {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
   margin-bottom: 0.9rem;
   color: var(--brand-soft);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.14em;
+  line-height: 1.6;
   text-transform: uppercase;
 }
 
 .eyebrow-dot {
+  flex: none;
   width: 0.45rem;
   height: 0.45rem;
+  margin-top: 0.45em;
   border-radius: 50%;
   background: var(--wa);
   box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.18);
@@ -473,28 +480,32 @@ button {
 .hero-inner {
   position: relative;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1.12fr 0.88fr;
   align-items: center;
-  gap: clamp(2.5rem, 5vw, 4.5rem);
+  gap: clamp(2rem, 4vw, 3rem);
 }
 
 .hero-copy h1 {
   max-width: 15em;
-  font-size: clamp(2.5rem, 5.3vw, 4.15rem);
-  letter-spacing: -0.038em;
-  line-height: 1.04;
+  font-size: clamp(2.2rem, 5.3vw, 3.6rem);
+  letter-spacing: -0.036em;
+  line-height: 1.06;
 }
 
 .highlight {
   display: inline;
   color: var(--brand);
   background-image: linear-gradient(
-    transparent 64%,
-    rgba(37, 211, 102, 0.32) 64%
+    transparent 72%,
+    rgba(37, 211, 102, 0.32) 72%
   );
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   padding-inline: 0.04em;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .lead {
@@ -589,13 +600,6 @@ button {
   color: var(--brand-soft);
   font-size: 0.72rem;
   font-weight: 500;
-}
-
-.chat-icon {
-  width: 1.4rem;
-  height: 1.4rem;
-  margin-left: auto;
-  color: var(--wa);
 }
 
 .chat-body {
@@ -753,36 +757,6 @@ button {
   color: var(--brand-soft);
   font-size: 0.64rem;
   font-weight: 600;
-}
-
-.float-card--alert {
-  bottom: 0.4rem;
-  left: -1.4rem;
-}
-
-.float-card--alert strong {
-  display: block;
-  font-size: 0.8rem;
-}
-
-.float-card--alert small {
-  color: var(--muted);
-  font-size: 0.7rem;
-}
-
-.float-icon {
-  display: grid;
-  place-items: center;
-  width: 2.1rem;
-  height: 2.1rem;
-  border-radius: 50%;
-  background: var(--mint-2);
-  color: var(--brand);
-}
-
-.float-icon .icon {
-  width: 1.05rem;
-  height: 1.05rem;
 }
 
 @keyframes float {
@@ -965,15 +939,22 @@ button {
 }
 
 .also {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.45rem;
   margin-top: 2rem;
   color: var(--muted);
   font-size: 0.85rem;
   text-align: center;
 }
 
-.also span {
-  display: inline-block;
-  margin: 0.25rem 0.15rem 0 0;
+.also-label {
+  margin-right: 0.15rem;
+}
+
+.also-chip {
   padding: 0.3rem 0.7rem;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -981,10 +962,6 @@ button {
   color: var(--ink-2);
   font-size: 0.8rem;
   font-weight: 500;
-}
-
-.also span + span {
-  margin-left: 0;
 }
 
 
@@ -1038,7 +1015,7 @@ button {
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1;
-  color: rgba(15, 122, 67, 0.13);
+  color: #759a86;
 }
 
 .step h3 {
@@ -1544,7 +1521,7 @@ button {
 /* =========================================================
    Responsive
    ========================================================= */
-@media (max-width: 1000px) {
+@media (max-width: 1120px) {
   .hero-inner {
     grid-template-columns: 1fr;
     gap: clamp(2.5rem, 6vw, 3.5rem);
@@ -1557,7 +1534,9 @@ button {
   .hero-visual {
     max-width: 30rem;
   }
+}
 
+@media (max-width: 1000px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1574,7 +1553,7 @@ button {
 }
 
 @media (max-width: 880px) {
-  .nav-toggle {
+  .js .nav-toggle {
     display: flex;
   }
 
@@ -1679,11 +1658,6 @@ button {
   .float-card--metric {
     top: 0.25rem;
     right: 0;
-  }
-
-  .float-card--alert {
-    bottom: 0;
-    left: 0;
   }
 }
 

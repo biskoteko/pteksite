@@ -187,9 +187,8 @@
       </div>
     </header>
 
-    <main id="conteudo">
+    <main id="conteudo" tabindex="-1">
       <section class="hero" id="top">
-        <div class="hero-glow" aria-hidden="true"></div>
         <div class="container hero-inner">
           <div class="hero-copy">
             <p class="eyebrow">
@@ -198,7 +197,9 @@
             </p>
             <h1>
               Sites e automações que
-              <span class="highlight">trabalham pelo seu negócio.</span>
+              <span class="highlight"
+                >trabalham pelo <span class="nowrap">seu negócio.</span></span
+              >
             </h1>
             <p class="lead">
               Criamos páginas que convertem, lojas online e atendimento automático
@@ -246,7 +247,6 @@
                   <strong>PTEK</strong>
                   <span class="chat-status">Online agora</span>
                 </span>
-                <svg class="icon chat-icon"><use href="#icon-whatsapp" /></svg>
               </div>
               <div class="chat-body">
                 <p class="bubble bubble--in">
@@ -279,20 +279,9 @@
               <strong>4 min</strong>
               <span class="float-trend">↓ 38% vs. mês anterior</span>
             </div>
-
-            <div class="float-card float-card--alert">
-              <span class="float-icon">
-                <svg class="icon"><use href="#icon-bolt" /></svg>
-              </span>
-              <span>
-                <strong>Novo pedido</strong>
-                <small>Landing page · há 2 min</small>
-              </span>
-            </div>
           </div>
         </div>
       </section>
-
 
       <section class="stats" aria-label="Números da PTEK">
         <div class="container stats-inner">
@@ -389,13 +378,13 @@
             </article>
           </div>
 
-          <p class="also reveal">
-            Também fazemos:
-            <span>identidade visual</span>
-            <span>copywriting</span>
-            <span>manutenção</span>
-            <span>integrações à medida</span>
-          </p>
+          <div class="also reveal">
+            <span class="also-label">Também fazemos:</span>
+            <span class="also-chip">identidade visual</span>
+            <span class="also-chip">copywriting</span>
+            <span class="also-chip">manutenção</span>
+            <span class="also-chip">integrações à medida</span>
+          </div>
         </div>
       </section>
 
@@ -721,18 +710,18 @@
         <p>© <span id="ano">2026</span> PTEK. Todos os direitos reservados.</p>
         <p>Feito com atenção ao detalhe em Portugal.</p>
       </div>
-    </footer>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/351928124737?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20vossos%20servi%C3%A7os."
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Abrir conversa no WhatsApp"
-      title="Fale connosco pelo WhatsApp"
-    >
-      <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp" /></svg>
-    </a>
+      <a
+        class="whatsapp-float"
+        href="https://wa.me/351928124737?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20vossos%20servi%C3%A7os."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir conversa no WhatsApp"
+        title="Fale connosco pelo WhatsApp"
+      >
+        <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp" /></svg>
+      </a>
+    </footer>
 
     <script src="script.js" defer></script>
   </body>
