@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   var header = document.querySelector("[data-header]");
   var nav = document.querySelector("[data-nav]");
   var toggle = document.querySelector("[data-nav-toggle]");
@@ -64,6 +66,87 @@
     } else if (typeof mobileQuery.addListener === "function") {
       mobileQuery.addListener(onBreakpointChange);
     }
+  }
+
+  /* Estado de atendimento real: 8h–22h em Europe/Lisbon. */
+  var statusLabels = Array.prototype.slice.call(
+    document.querySelectorAll("[data-status-label]")
+  );
+  var statusDots = Array.prototype.slice.call(
+    document.querySelectorAll("[data-open-dot]")
+  );
+
+  var isOpenNow = function () {
+    try {
+      var parts = new Intl.DateTimeFormat("pt-PT", {
+        timeZone: "Europe/Lisbon",
+        hour: "2-digit",
+        hourCycle: "h23"
+      }).formatToParts(new Date());
+      var hours = parts.filter(function (part) {
+        return part.type === "hour";
+      })[0];
+      var hour = Number(hours && hours.value);
+      return hour >= 8 && hour < 22;
+    } catch (error) {
+      var now = new Date();
+      return now.getHours() >= 8 && now.getHours() < 22;
+    }
+  };
+
+  var syncStatus = function () {
+    var open = isOpenNow();
+
+    statusLabels.forEach(function (label) {
+      label.textContent = open
+        ? "Online agora"
+        : "Fora de horário · respondemos às 8h";
+    });
+
+    statusDots.forEach(function (dot) {
+      dot.classList.toggle("is-off", !open);
+    });
+  };
+
+  if (statusLabels.length) {
+    syncStatus();
+    window.setInterval(syncStatus, 60000);
+  }
+
+  /* O atalho flutuante só aparece depois do CTA do hero e sai do caminho do CTA final. */
+  var floatLink = document.querySelector(".whatsapp-float");
+  var heroActions = document.querySelector(".hero-actions");
+  var finalCta = document.querySelector(".cta-final");
+
+  if (
+    floatLink &&
+    heroActions &&
+    finalCta &&
+    "IntersectionObserver" in window
+  ) {
+    var floatState = { heroVisible: true, ctaVisible: false };
+
+    var syncFloat = function () {
+      var hide = floatState.heroVisible || floatState.ctaVisible;
+      if (floatLink === document.activeElement) hide = false;
+      floatLink.classList.toggle("is-hidden", hide);
+    };
+
+    new IntersectionObserver(
+      function (entries) {
+        floatState.heroVisible = entries[0].isIntersecting;
+        syncFloat();
+      },
+      { threshold: 0.6 }
+    ).observe(heroActions);
+
+    new IntersectionObserver(
+      function (entries) {
+        floatState.ctaVisible = entries[0].isIntersecting;
+        syncFloat();
+      },
+      { threshold: 0.25 }
+    ).observe(finalCta);
   }
 
   /* Revelação suave das secções ao entrar no ecrã. */
